@@ -1,0 +1,196 @@
+/* --- Global Configuration --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+:root {
+    --primary: #22c55e;
+    --primary-dark: #16a34a;
+    --transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    cursor: none; /* Hidden for custom magnetic cursor */
+}
+
+/* --- Custom Magnetic Cursor --- */
+#cursor-dot {
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+#cursor-outline {
+    transition: transform 0.15s ease-out;
+}
+
+/* Cursor interaction on hover */
+body:has(a:hover, button:hover, .swiper-button:hover) #cursor-outline {
+    transform: scale(1.8);
+    background-color: rgba(34, 197, 94, 0.1);
+    border-color: transparent;
+}
+
+/* --- Scroll Reveal Physics --- */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(50px) scale(0.96);
+    transition: var(--transition);
+    will-change: transform, opacity;
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/* --- Navigation & Glassmorphism --- */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* --- Swiper Slider (Split Screen Fixes) --- */
+.project-slider {
+    padding: 20px 0 60px 0 !important;
+    overflow: visible !important;
+}
+
+.swiper-slide {
+    opacity: 0.4;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: scale(0.92);
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.swiper-slide img {
+    filter: grayscale(20%);
+    transition: filter 0.5s ease;
+}
+
+.swiper-slide-active img {
+    filter: grayscale(0%);
+}
+
+/* --- Pricing Section Centering & Layout --- */
+#pricing .grid {
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    #pricing .grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 2rem;
+    }
+}
+
+.pricing-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+/* --- Form Improvements --- */
+input, textarea, select {
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.3);
+}
+
+/* --- Animations --- */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.floating-element {
+    animation: float 8s ease-in-out infinite;
+}
+
+/* --- Dark Mode Toggle Smoothness --- */
+.dark body {
+    background-color: #030712; /* gray-950 */
+}
+
+.dark * {
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* --- Responsive Mobile Tweaks --- */
+@media (max-width: 768px) {
+    body {
+        cursor: auto; /* Show default cursor on mobile */
+    }
+    
+    #cursor-dot, #cursor-outline {
+        display: none;
+    }
+    
+    .swiper-slide {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    .project-slider .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-slider .relative {
+        height: 300px;
+    }
+}
+.mobile-nav-link {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mobile-nav-link:active {
+    transform: scale(0.95);
+    color: var(--primary);
+}
+
+/* Ensure mobile menu doesn't show cursor-dot */
+#mobile-menu a {
+    cursor: pointer;
+}
