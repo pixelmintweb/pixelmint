@@ -15,4 +15,4 @@ You can visit the live website here:
 
 ## Contact
 
-Email: hello.pixelmint@gmail.com
+Email: pixelmint.works@gmail.com
