@@ -11,7 +11,7 @@ The goal is to build simple, effective websites without unnecessary complexity.
 ## Live Site
 
 You can visit the live website here:  
-[https://pixelmintweb.github.io](https://pixelmintweb.github.io)
+[https://pixelmint.github.io](https://pixelmint.github.io)
 
 ## Contact
 
