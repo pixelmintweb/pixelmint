@@ -23,9 +23,43 @@
             }
         }
     </script>
+    <meta name="description" content="PixelMint Studio - Best premium WordPress designer and web developer near you. High-performance, cheap, and professional web design services.">
+<meta name="keywords" content="Best Designer near me, Web Designer cheap, WordPress developer, professional web design, PixelMint Studio">
+<meta name="author" content="PixelMint Studio">
+
+<meta property="og:title" content="PixelMint Studio | Best Web Designer Near Me">
+<meta property="og:description" content="Affordable, premium WordPress development. Get your business online with the best designer.">
+<meta property="og:url" content="https://yourdomain.com">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "PixelMint Studio",
+  "image": "https://yourdomain.com/favicon.png",
+  "url": "https://yourdomain.com",
+  "priceRange": "$$",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Manchester" 
+    },
+    {
+      "@type": "State",
+      "name": "Texas"
+    }
+  ],
+  "description": "Best premium WordPress designer and web developer. Providing affordable and professional web design services."
+}
+</script>
 </head>
 <body class="bg-white dark:bg-gray-950 transition-colors duration-500 overflow-x-hidden">
-
+<div id="loader" class="fixed inset-0 z-[9999] bg-gray-950 flex items-center justify-center transition-opacity duration-700">
+    <div class="flex flex-col items-center">
+        <div class="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+        <span class="text-white font-black tracking-[0.3em] text-xs uppercase animate-pulse">PixelMint Studio</span>
+    </div>
+</div>
     <div id="cursor-dot" class="fixed w-2 h-2 bg-primary-500 rounded-full pointer-events-none z-[9999] opacity-0 md:opacity-100"></div>
     <div id="cursor-outline" class="fixed w-8 h-8 border-2 border-primary-500 rounded-full pointer-events-none z-[9998] transition-all duration-150 ease-out opacity-0 md:opacity-100"></div>
 
@@ -89,10 +123,15 @@
             <p class="reveal-up delay-100 text-xl md:text-2xl text-gray-100 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
                 Premium WordPress architecture for brands that demand authority and performance.
             </p>
+        <div class="sr-only" aria-hidden="true">
+        <h2>Best Web Designer Near Me</h2>
+        <p>Looking for a web designer cheap but professional? PixelMint Studio is the best designer near you for WordPress and eCommerce.</p>
+    </div>
             <div class="reveal-up delay-200 flex justify-center gap-6">
                 <a href="#contact" class="px-12 py-6 bg-white text-primary-600 rounded-2xl font-black uppercase tracking-widest text-sm hover:shadow-2xl transition-all">Elevate Your Presence</a>
             </div>
         </div>
+        
     </section>
 
     <section id="services" class="py-32 bg-white dark:bg-gray-950">
@@ -238,7 +277,7 @@
             </div>
 
             <div class="reveal-up delay-200">
-                <form action="https://formkeep.com/f/50f96640a2f0" method="POST" class="space-y-4">
+                <form action="https://formspree.io/f/mdaklkzw" method="POST" class="space-y-4">
                     <div class="grid md:grid-cols-2 gap-4">
                         <input type="text" name="name" placeholder="YOUR NAME" required class="w-full bg-white/5 border border-white/10 p-6 rounded-3xl focus:border-primary-500 focus:outline-none uppercase text-xs font-bold tracking-widest">
                         <input type="email" name="email" placeholder="YOUR EMAIL" required class="w-full bg-white/5 border border-white/10 p-6 rounded-3xl focus:border-primary-500 focus:outline-none uppercase text-xs font-bold tracking-widest">
@@ -268,5 +307,4 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
